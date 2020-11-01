@@ -1,6 +1,6 @@
 # 그래서 플러터가 뭔데요?
 
-![Flutter](https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png)
+<a title="google, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Google-flutter-logo.png"><img width="256" alt="Google-flutter-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google-flutter-logo.png/256px-Google-flutter-logo.png"></a>
 
 [플러터](https://flutter.dev/)는 구글이 개발한 오픈 소스 모바일 애플리케이션 개발 프레임워크이다.
 
