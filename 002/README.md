@@ -8,4 +8,4 @@ MacOS는 [여기](https://flutter.dev/docs/get-started/install/macos)를 참고�
 
 ## 설치를 시작해볼까요?
 
-원문은 [이곳](https://flutter.dev/docs/get-started/install/windows)을 참고해주세요. 이 글은 원문을 기반으로 쓰였습니다.
+이 글은 원문을 기반으로 쓰였습니다. 원문은 [이곳](https://flutter.dev/docs/get-started/install/windows)을 참고해주세요.
