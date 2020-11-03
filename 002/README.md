@@ -65,3 +65,53 @@ MacOS는 [여기](https://flutter.dev/docs/get-started/install/macos)를 참고�
 저는 D드라이브의 `Program Files` 파일에 `flutter` 파일의 압축을 풀어놓았으므로 위와 같이 `D:\Program files\flutter\bin\` 의 형태로 경로가 나오게 됩니다.
 
 <br>
+
+## 안드로이드 설치
+
+![i07](./i07.png)
+
+[이곳](https://developer.android.com/studio)에서 안드로이드 스튜디오를 다운받은 뒤, 설치해줍니다.
+
+설치 후, 실행을 시키면 위와 같은 메뉴가 나오게 됩니다. ('Start a new Flutter project'는 아직 없는게 정상입니다.)
+
+우측 하단의 `Configure` 메뉴에서 `Settings` 를 눌러줍니다.
+
+<br>
+
+![i08](./i08.png)
+
+`Appearance & Behavior` > `System Settings` > `Android SDK` 메뉴를 들어갑니다.
+
+우측 하단의 `Hide Obsolete Packages`와 `Show Package Details` 체크박스를 모두 선택한 뒤, 최신 버전의 안드로이드 SDK Platform의 체크박스를 선택해줍니다.
+
+<br>
+
+![i09](./i09.png)
+
+그리고 상단의 메뉴들 중 `SDK Tools` 메뉴로 가서, `Android SDK Command-line Tools`, `Android SDK Build-Tools`의 체크박스를 선택해줍니다.
+
+모두 선택하였다면 우측 하단의 `Apply`버튼을 누릅니다.
+
+<br>
+
+## 안드로이드 디바이스 설정
+
+![i10](./i10.png)
+
+개발자 옵션으로 가서, USB 디버깅을 켜줍니다. 자세한 내용은 [여기](https://developer.android.com/studio/debug/dev-options)를 참고해주세요.
+
+그리고 [여기](https://developer.android.com/studio/run/win-usb)를 통해 Google USB 드라이버를 설치해줍니다.
+
+디바이스와 컴퓨터를 USB 선으로 연결해주고, 디바이스에 접근을 허용해줍니다.
+
+<br>
+
+![i11](./i11.png)
+
+그리고 위에서 했던 것 처럼 환경 변수 창을 열어준 뒤, 시스템 변수에 `새로 만들기` 버튼을 눌러줍니다.
+
+위와 같이 변수 이름을 `ANDROID_SDK_ROOT`로 적고, 변수 값에 SDK 경로를 적습니다.
+
+다 적으셨다면 확인 버튼을 눌러주세요!
+
+안드로이드 에뮬레이터 설정은 [여기](https://flutter.dev/docs/get-started/install/windows#set-up-the-android-emulator)를 참고해주세요!
