@@ -115,3 +115,35 @@ MacOS는 [여기](https://flutter.dev/docs/get-started/install/macos)를 참고�
 다 적으셨다면 확인 버튼을 눌러주세요!
 
 안드로이드 에뮬레이터 설정은 [여기](https://flutter.dev/docs/get-started/install/windows#set-up-the-android-emulator)를 참고해주세요!
+
+<br>
+
+## Visual Studio Code 설정
+
+필자는 Visual Studio Code(이하 VSCode) 환경이므로, 이를 기준으로 설명하겠습니다.
+
+Android Studio와 IntelliJ는 [여기](https://flutter.dev/docs/get-started/editor?tab=androidstudio)를 참고해주세요!
+
+[여기](https://code.visualstudio.com/)서 최신 버전의 VSCode를 다운받아서, 설치해줍니다.
+
+<br>
+
+![i12](./i12.png)
+
+설치 완료 후, 위 처럼 실행한 뒤 좌측의 정사각형 4개를 가진 아이콘을 눌러줍니다.
+
+<br>
+
+![i13](./i13.png)
+
+`Search Extensions in Marketplace` 에 Flutter을 입력한 뒤, 설치해줍니다.
+
+Flutter을 설치하면 Dart Extension도 자동으로 설치됩니다.
+
+설치 후, 상단의 메뉴에서 `View` > `Command Palette...` 를 선택한 뒤, `doctor`이라고 입력합니다.
+
+그러면 아래에 검색 결과가 나올텐데, 그 중 `Flutter: Run Flutter Doctor` 를 선택해줍니다.
+
+만약 `Android toolchain` 부분에서 `Some Android licenses not accepted.` 이라는 오류가 나온다면, `flutter doctor --android-licenses` 명령어를 실행한 뒤, 모두 동의를 해주면 됩니다.
+
+<br>
