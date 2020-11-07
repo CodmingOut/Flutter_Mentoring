@@ -68,6 +68,8 @@
 
 숫자 데이터 타입에서 쓸 수 있는 속성(Property)은 다음과 같습니다.
 
+아래의 속성들 외에도, 여러 속성이 있습니다.
+
 |ID|Property|Description|
 |:---:|:---|:---|
 |1|hashCode|해당 숫자 값의 해시값을 반환|
@@ -113,5 +115,115 @@ void main() {
 void main() {
   double n = 7.1;
   print(n.toInt()); // Print 7
+}
+```
+
+<br>
+
+## 문자
+
+문자를 표현하는 데이터 타입은 String 이 있습니다.
+
+```dart
+String s = '안녕!';
+String multiLineString = '''
+  안녕!
+  이렇게 하면 여러 줄도 쓸 수 있어요!
+''';
+```
+
+위와 같이 선언하고, 초기화합니다.
+
+문자열을 직접 써주는 경우(위의 경우, 안녕! 이라는 문자열), 작은 따옴표 혹은 큰 따옴표로 감싸주셔야 합니다.
+
+<br>
+
+```dart
+void main() { 
+   String str1 = "hello"; 
+   String str2 = "world"; 
+   String res = str1 + str2;
+
+   int idx = 5;
+   
+   print("${idx}. The string : ${res}"); // 5. The string : helloworld
+
+   int n=1+1; 
+   
+   String str1 = "The sum of 1 and 1 is ${n}";
+   print(str1); // The sum of 1 and 1 is 2
+   
+   String str2 = "The sum of 2 and 2 is ${2+2}"; 
+   print(str2); // The sum of 2 and 2 is 4
+}
+```
+
+다트에서는 위와 같이 '+' 연산자를 통해 문자열과 문자열을 결합하는 것을 지원하고, $와 중괄호(상황에 따라 생략 가능)를 통해 문자열 안에 값을 넣을 수도 있습니다.
+
+<br>
+
+```dart
+void main() {
+	String hello = "안녕하세요!";
+	print(hello[1]); // 녕
+}
+```
+
+문자열에서 어떤 위치에 있는 문자 1개를 가져오려면, 위와 같이 대괄호와 인덱스를 사용하여 가져올 수 있습니다.
+
+<br>
+
+문자 데이터 타입에서 쓸 수 있는 속성(Property)은 다음과 같습니다.
+
+아래의 속성들 외에도, 여러 속성이 있습니다.
+
+|ID|Property|Description|
+|:---:|:---|:---|
+|1|codeUnits|문자열의 각각의 문자 하나의 UTF-16 코드들의 리스트를 반환|
+|2|isEmpty|문자열의 값이 비었다면 true, 아니면 false|
+|3|length|문자열의 길이 반환|
+
+속성은 아래와 같이 쓸 수 있습니다.
+
+```dart
+void main() {
+  String hello = "안녕하세요 여러분!";
+  print(hello.length); // 10
+}
+```
+
+<br>
+
+문자 데이터 타입에서 쓸 수 있는 함수(메서드)는 다음과 같습니다.
+
+아래의 함수들 외에도, 여러 함수가 있습니다.
+
+|ID|Method|Description|Parameters|
+|:---:|:---|:---|:---|
+|1|toLowerCase|문자열의 영어들을 모두 소문자로 바꾼 문자열을 반환||
+|2|toUpperCase|문자열의 영어들을 모두 대문자로 바꾼 문자열을 반환||
+|3|trim|문자열 앙 옆에 있는 빈 칸을 모두 없앤 문자열을 반환||
+|4|compareTo|문자열과 매개변수로 들어온 문자열을 비교. 같으면 0, 사전순으로 해당 문자열이 더 앞에 있다면 -1, 더 뒤에 있다면 1을 반환|String|
+|5|replaceAll|매개변수로 패턴과 바뀔 문자열을 받고, 해당 문자열에 받은 패턴과 같은 형태의 패턴을 모두 바뀔 문자열로 바꾼 문자열을 반환|Pattern, String|
+|6|split|매개변수로 패턴을 받고, 그를 기준으로 문자열을 나눈 뒤, 결과를 리스트로 반환|Pattern|
+|7|substring|매개변수로 한(두) 개의 정수값을 받고, 그를 기준으로 문자열을 자른 결과를 반환|int, [int]|
+|8|codeUnitAt|매개변수로 한 개의 인덱스(정수)를 받아서, 해당 인덱스 위치에 있는 문자의 UTF-16 코드를 반환|int|
+
+함수는 아래와 같이 쓸 수 있습니다.
+
+```dart
+void main() {
+  String str1 = "  Hello World!    ";
+  print(str1.trim()); // Hello World!
+  
+  String str2 = "Hello World";
+  print("New String: ${str2.replaceAll('World','ALL')}"); // New String: Hello ALL
+  
+  String str3 = "Today,is,Thursday"; 
+  print("New String: ${str3.split(',')}"); // New String: [Today, is, Thursday]
+  
+  String str4 = "Hello World"; 
+  print("New String: ${str4.substring(6)}"); // New String: World
+  print("New String: ${str4.substring(2,6)}"); // New String: llo (인덱스 2부터 6미만(즉, 5)까지 자름)
 }
 ```
