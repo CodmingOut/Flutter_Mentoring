@@ -227,3 +227,23 @@ void main() {
   print("New String: ${str4.substring(2,6)}"); // New String: llo (인덱스 2부터 6미만(즉, 5)까지 자름)
 }
 ```
+
+<br>
+
+## 불(불리언, 불린, Boolean)
+
+불을 표현하는 데이터 타입은 bool 이 있습니다.
+
+이 타입은 오직 true와 false만 가질 수 있습니다.
+
+```dart
+bool test = false;
+bool isHuman = true;
+```
+
+위와 같이 선언하고, 초기화합니다.
+
+불 타입은 딱히 속성이나 함수가 존재하지 않습니다.
+
+그만큼 간단한 데이터 타입이죠!
+
