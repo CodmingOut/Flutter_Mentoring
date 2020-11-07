@@ -64,6 +64,8 @@
 
 	위와 같이 선언하고, 초기화합니다.
 
+<br>
+
 숫자 데이터 타입에서 쓸 수 있는 속성(Property)은 다음과 같습니다.
 
 |ID|Property|Description|
