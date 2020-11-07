@@ -341,14 +341,14 @@ void main() {
 ```dart
 void main() {
   List lst = new List();
-  lst.add(12);							// [12]
-  lst.addAll([13, 4]);					// [12, 13, 4]
-  lst.insert(0, 7);						// [7, 12, 13, 4]
-  lst.insertAll(1, [17, 2]);			// [7, 17, 2, 12, 13, 4]
+  lst.add(12);				// [12]
+  lst.addAll([13, 4]);			// [12, 13, 4]
+  lst.insert(0, 7);			// [7, 12, 13, 4]
+  lst.insertAll(1, [17, 2]);		// [7, 17, 2, 12, 13, 4]
   lst.replaceRange(2, 3, [1, 3, 4]);	// [7, 17, 1, 3, 4, 12, 13, 4]
-  lst.remove(12);						// [7, 17, 1, 3, 4, 13, 4]
-  lst.removeAt(2);						// [7, 17, 3, 4, 13, 4]
-  lst.removeLast();						// [7, 17, 3, 4, 13]
-  lst.removeRange(2, 4);				// [7, 17, 13]
+  lst.remove(12);			// [7, 17, 1, 3, 4, 13, 4]
+  lst.removeAt(2);			// [7, 17, 3, 4, 13, 4]
+  lst.removeLast();			// [7, 17, 3, 4, 13]
+  lst.removeRange(2, 4);		// [7, 17, 13]
 }
 ```
