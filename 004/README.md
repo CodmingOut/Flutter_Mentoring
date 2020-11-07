@@ -247,3 +247,108 @@ bool isHuman = true;
 
 그만큼 간단한 데이터 타입이죠!
 
+<br>
+
+## 리스트
+
+여러 데이터를 가질 수 있는 데이터 타입입니다.
+
+정확히는, 순서를 가진 객체들의 집합인 자료구조 리스트를 구현한 클래스입니다.
+
+```dart
+List general_initialize_list = new List();
+List simple_initialize_list = [];
+List<int> generic_list = new List<int>();
+```
+
+위와 같이 선언하고, 초기화합니다.
+
+`new List()` 를 통해 초기화할 수도 있고, `[]` 를 통해 간단하게 초기화할 수 있습니다.
+
+세번째 초기화는 제너릭을 사용한 초기화로써, 특정 타입만을 넣을 수 있게 만듭니다.
+
+물론, 제너릭 초기화도 `[]` 를 통해 초기화할 수 있습니다.
+
+<br>
+
+```dart
+List valueList = [1, 3, 2];
+```
+
+위 처럼 초기화할 때 값을 넣을 수도 있습니다.
+
+<br>
+
+```dart
+List valueList = [1, 3, 4, 7];
+
+print(valueList[1]); // 3
+
+valueList[2] = 5; // 인덱스 2의 값을 5로 바꾼다.
+print(valueList[2]); // 5
+```
+
+리스트의 값에 접근하려면, 위 처럼 대괄호에 인덱스를 넣어 접근할 수 있습니다.
+
+<br>
+
+리스트에서 쓸 수 있는 속성(Property)은 다음과 같습니다.
+
+아래의 속성들 외에도, 여러 속성이 있습니다.
+
+|ID|Property|Description|
+|:---:|:---|:---|
+|1|first|리스트의 첫번째 값을 반환|
+|2|isEmpty|리스트가 비었으면 true, 아니면 false|
+|3|isNotEmpty|리스트가 비어있지 않으면 true, 아니면 false|
+|4|length|리스트의 길이를 반환|
+|5|last|리스트의 마지막 값을 반환|
+|6|reversed|해당 리스트의 순서를 반대로 뒤집은 Iterator를 반환|
+
+속성은 아래와 같이 쓸 수 있습니다.
+
+```dart
+void main() {
+  List lst = new List();
+  lst.add(12);
+  lst.add(13);
+  print("The Reversed List: ${lst.reversed}"); // The Reversed List: (13, 12)
+  print(new List.from(lst.reversed)); // [13, 12] (from을 사용하여 Iterator를 다시 리스트로 바꿀 수 있습니다.)
+}
+```
+
+<br>
+
+리스트에서 쓸 수 있는 함수(메서드)는 다음과 같습니다.
+
+아래의 함수들 외에도, 여러 함수가 있습니다.
+
+|ID|Method|Description|Parameters|
+|:---:|:---|:---|:---|
+|1|add|리스트에 값을 추가|dynamic|
+|2|addAll|리스트에 값을 한번에 추가|Iterable|
+|3|insert|리스트 중간에 값을 추가|int, dynamic|
+|4|insertAll|리스트 중간에 값을 한번에 추가|int, Iterable|
+|5|replaceRange|리스트의 특정 범위에 있는 값들을 다른 값들로 대체|int, int, Iterable|
+|6|remove|리스트의 특정 값을 제거한다. 제거를 하면(즉, 리스트 안에 해당 값이 있다면) true, 아니면 false|Object|
+|7|removeAt|리스트의 특정 인덱스에 있는 값을 제거하고 해당 값을 반환|int|
+|8|removeLast|리스트의 마지막 값을 제거하고 해당 값을 반환||
+|9|removeRange|리스트의 특정 범위에 있는 값들을 제거|int, int|
+
+
+함수는 아래와 같이 쓸 수 있습니다.
+
+```dart
+void main() {
+  List lst = new List();
+  lst.add(12);							// [12]
+  lst.addAll([13, 4]);					// [12, 13, 4]
+  lst.insert(0, 7);						// [7, 12, 13, 4]
+  lst.insertAll(1, [17, 2]);			// [7, 17, 2, 12, 13, 4]
+  lst.replaceRange(2, 3, [1, 3, 4]);	// [7, 17, 1, 3, 4, 12, 13, 4]
+  lst.remove(12);						// [7, 17, 1, 3, 4, 13, 4]
+  lst.removeAt(2);						// [7, 17, 3, 4, 13, 4]
+  lst.removeLast();						// [7, 17, 3, 4, 13]
+  lst.removeRange(2, 4);				// [7, 17, 13]
+}
+```
